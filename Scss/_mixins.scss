@@ -1,0 +1,15 @@
+@use "variables" as *;
+@mixin box($width: 100%, $height: auto, $padding: 0, $pd-inline: auto, $margin: 0, $bd-radius: none) {
+  width: $width;
+  height: $height;
+  padding: $padding;
+  padding-inline: $pd-inline;
+  margin: $margin;
+  border-radius: $bd-radius;
+}
+
+@mixin flex($align-items, $justify-cnt) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-cnt;
+}

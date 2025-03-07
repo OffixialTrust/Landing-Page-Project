@@ -1,0 +1,17 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+body {
+  // background: $light-grey;
+  @include box;
+  font-family: 'Be Vietnam Pro';
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.7;
+}

@@ -1,0 +1,239 @@
+@use "./Scss/variables" as *;
+@use "./Scss/mixins" as *;
+@use "./Scss/layout";
+@use "./Scss/header.scss";
+@use "./Scss/responsive.scss";
+
+.dark-blue {
+  color: $dark-blue;
+  font-weight: $bolder;
+}
+
+.grey-blue {
+  color: $grey-blue;
+}
+
+button {
+  cursor: pointer;
+}
+
+.get-started {
+    border: none;
+    background-color: $bright-red;
+    font-weight: $bolder;
+    padding: 15px 35px;
+    color: $white;
+    border-radius: $big-bd-radius;
+    box-shadow: 0 12px 24px -10px $bright-red;
+} 
+.get-started:hover {
+  opacity: 0.7;
+}
+
+.section {
+  text-align: center;
+  @include box($margin: 20px 0, $pd-inline: $inline);
+}
+
+#about-us {
+  margin: 25px 0;
+}
+
+#product {
+  @include box($margin: 20px 0);
+  
+  .product-header {
+    background-color: $pale-red;
+    margin: 0 0 0 10px;
+    border-radius: $big-bd-radius 0 0 $big-bd-radius;
+    
+    .product-number {
+      border-radius: $big-bd-radius;
+      background-color: $bright-red;
+      color: $white;
+      font-weight: $bolder;
+      width: 60px;
+      padding: 10px 20px;
+      text-align: center;
+      display: inline-block;
+    }
+  }
+  
+  .dark-blue {
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  
+  .grey-blue {
+    padding-inline: $inline;
+  }
+}
+
+#community {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.slider {
+  @include box($padding: $inline);
+  position: relative;
+  
+  .slider-button {
+    background-color: $pale-red;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .slider-button:hover {
+    background: $grey-blue;
+  }
+  
+  #slider-button-left {
+    position: absolute;
+    left: 7.5px;
+    top: calc((100% - 30px) / 2);
+    z-index: 1;
+  }
+
+  #slider-button-right {
+    position: absolute;
+    right: 7.5px;
+    top: calc((100% - 30px) / 2);
+    z-index: 1;
+  }
+    
+  .active-states {
+    margin: 20px 0;
+    
+    span {
+    display: inline-block;
+    border: 1px solid $bright-red;
+    border-radius: 50%;
+    width: 2px; 
+    height: 2px;
+    padding: 4px;
+    margin: 1px;
+  }
+  }
+  
+  .active {
+    background-color: $bright-red;
+  }
+}
+
+.slider-container {
+ // padding: 30px 0;
+  text-align: center;
+  display: none;
+  height: 200px;
+}
+  
+.slider-text {
+  background-color: $light-grey;
+  position: relative;
+  padding: 20px;
+    
+  img {
+    position: absolute;
+    top: -30px;
+    left: calc((100% - 60px) / 2);
+  }
+}
+
+div.center {
+  @include box($margin: 20px 0 40px);
+  text-align: center;
+}
+
+#footer-1 {
+  @include box($padding: 30px);
+  background: $bright-red;
+  text-align: center;
+  .large-text {
+    font-size: 35px;
+    line-height: normal;
+    color: $white;
+    font-weight: $bolder;
+  }
+  .get-started {
+    background-color: $white;
+    color: $bright-red;
+  }
+  .get-started:hover {
+    color: rgba(194, 73, 40, 0.7);
+    opacity: 1;
+  }
+}
+
+#footer-2 {
+  background: $very-dark-blue;
+  @include box($padding: 20px);
+}
+
+#form {
+  margin: 20px 0;
+  input {
+    outline: none;
+    border-radius: $big-bd-radius;
+    border: none;
+    padding: 15px $inline;
+    color: $very-dark-blue;
+    margin-right: 10px;
+  }
+  
+  button {
+    @extend .get-started;
+    padding: 15px 25px;
+    box-shadow: none;
+  }
+  
+  p {
+    color: red;
+    margin-top: 0;
+    display: none;
+    font-size: 14px;
+  }
+}
+
+#bottom-nav {
+  @include box($padding: 10px);
+  @include flex(start, space-between);
+  #right {
+    justify-self: flex-end;
+  }
+  ul {
+    @include box;
+    li {
+      list-style: none;
+      a {
+        display: block;
+        color: $white;
+        text-decoration: none;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+#contact-us {
+  @include box($padding: 20px, $margin: 20px 0);
+  @include flex(center, space-around);
+  img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+}
+
+#bottom-logo {
+  @include box($margin: 40px 0 20px);
+  text-align: center;
+}
+
+#copyright {
+  @include box($margin: 40px 0 0 0);
+  text-align: center;
+  font-size: 13px;
+}
+

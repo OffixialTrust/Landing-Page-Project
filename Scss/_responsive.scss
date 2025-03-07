@@ -1,0 +1,89 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+@media screen and (min-width: 768px) {
+  $inline: 150px;
+  
+  #header {
+    padding-inline: $inline;
+    #top-nav {
+      position: static;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 55%;
+      background-color: transparent;
+    }
+    
+  #menu {
+    display: none;
+  }
+  
+  #top-button {
+    display: block;
+  }
+  }
+  
+  #main {
+    @include box($pd-inline: $inline);
+    display: grid;
+    gap: $inline;
+    grid-template-areas: 'one two' 'three four';
+    
+    #about-us {
+      @include box;
+      grid-area: one;
+      text-align: left;
+    }
+    
+    #illustration {
+      grid-area: two;
+    }
+    
+    #careers {
+      @include box;
+      grid-area: three;
+      text-align: left;
+      h2.dark-blue {
+        text-align: left;
+      }
+    }
+    
+    #product {
+      grid-area: four;
+      .product-header {
+        background-color: transparent;
+      }
+      .dark-blue {
+        margin-left: 12px;
+      }
+      .grey-blue {
+        margin-left: 70px;
+      }
+    }
+  }
+  
+  .slider {
+    @include box($padding: 30px 0);
+    @include flex(center, space-between);
+    overflow-x: scroll;
+    .slider-button {
+      display: none;
+    }
+    .active-states {
+      display: none;
+    }
+    
+    .slider-container {
+      display: block;
+      width: 33%;
+      margin: 0 10px;
+    }
+    
+    .slider-container#last-child {
+      display: none;
+    }
+  }
+
+  /* bottom of media query */
+}

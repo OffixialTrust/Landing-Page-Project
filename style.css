@@ -1,0 +1,465 @@
+body {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  padding-inline: auto;
+  margin: 0;
+  border-radius: none;
+  font-family: "Be Vietnam Pro";
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.7;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  padding-inline: auto;
+  margin: 0;
+  border-radius: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  display: none;
+  z-index: 2;
+}
+
+#header {
+  width: 100%;
+  height: auto;
+  padding: 40px 0;
+  padding-inline: 20px;
+  margin: 0;
+  border-radius: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+#header #top-nav {
+  background-color: #fff;
+  width: 90%;
+  height: auto;
+  padding: 15px 0;
+  padding-inline: auto;
+  margin: 0;
+  border-radius: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  justify-self: center;
+  z-index: 4;
+  list-style: none;
+}
+#header #top-nav li {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  padding-inline: auto;
+  margin: 0;
+  border-radius: none;
+}
+#header #top-nav li a {
+  color: hsl(228, 39%, 23%);
+  display: block;
+  font-weight: 500;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+#header #top-nav li a:hover {
+  opacity: 0.7;
+}
+#header #menu {
+  z-index: 2;
+  cursor: pointer;
+}
+#header #menu #close-menu {
+  display: none;
+}
+#header #top-button {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  #header {
+    padding-inline: 150px;
+  }
+  #header #top-nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 55%;
+    background-color: transparent;
+  }
+  #header #menu {
+    display: none;
+  }
+  #header #top-button {
+    display: block;
+  }
+  #main {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    padding-inline: 150px;
+    margin: 0;
+    border-radius: none;
+    display: grid;
+    gap: 150px;
+    grid-template-areas: "one two" "three four";
+  }
+  #main #about-us {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    padding-inline: auto;
+    margin: 0;
+    border-radius: none;
+    grid-area: one;
+    text-align: left;
+  }
+  #main #illustration {
+    grid-area: two;
+  }
+  #main #careers {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    padding-inline: auto;
+    margin: 0;
+    border-radius: none;
+    grid-area: three;
+    text-align: left;
+  }
+  #main #careers h2.dark-blue {
+    text-align: left;
+  }
+  #main #product {
+    grid-area: four;
+  }
+  #main #product .product-header {
+    background-color: transparent;
+  }
+  #main #product .dark-blue {
+    margin-left: 12px;
+  }
+  #main #product .grey-blue {
+    margin-left: 70px;
+  }
+  .slider {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    padding-inline: auto;
+    margin: 0;
+    border-radius: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: scroll;
+  }
+  .slider .slider-button {
+    display: none;
+  }
+  .slider .active-states {
+    display: none;
+  }
+  .slider .slider-container {
+    display: block;
+    width: 33%;
+    margin: 0 10px;
+  }
+  .slider .slider-container#last-child {
+    display: none;
+  }
+  /* bottom of media query */
+}
+.dark-blue {
+  color: hsl(228, 39%, 23%);
+  font-weight: 700;
+}
+
+.grey-blue {
+  color: hsl(227, 12%, 61%);
+}
+
+button {
+  cursor: pointer;
+}
+
+.get-started, #form button {
+  border: none;
+  background-color: hsl(12, 88%, 59%);
+  font-weight: 700;
+  padding: 15px 35px;
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 12px 24px -10px hsl(12, 88%, 59%);
+}
+
+.get-started:hover, #form button:hover {
+  opacity: 0.7;
+}
+
+.section {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  padding-inline: 20px;
+  margin: 20px 0;
+  border-radius: none;
+}
+
+#about-us {
+  margin: 25px 0;
+}
+
+#product {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  padding-inline: auto;
+  margin: 20px 0;
+  border-radius: none;
+}
+#product .product-header {
+  background-color: hsl(13, 100%, 96%);
+  margin: 0 0 0 10px;
+  border-radius: 25px 0 0 25px;
+}
+#product .product-header .product-number {
+  border-radius: 25px;
+  background-color: hsl(12, 88%, 59%);
+  color: #fff;
+  font-weight: 700;
+  width: 60px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+}
+#product .dark-blue {
+  font-size: 15px;
+  margin-left: 10px;
+}
+#product .grey-blue {
+  padding-inline: 20px;
+}
+
+#community {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.slider {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  padding-inline: auto;
+  margin: 0;
+  border-radius: none;
+  position: relative;
+}
+.slider .slider-button {
+  background-color: hsl(13, 100%, 96%);
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.slider .slider-button:hover {
+  background: hsl(227, 12%, 61%);
+}
+.slider #slider-button-left {
+  position: absolute;
+  left: 7.5px;
+  top: calc((100% - 30px) / 2);
+  z-index: 1;
+}
+.slider #slider-button-right {
+  position: absolute;
+  right: 7.5px;
+  top: calc((100% - 30px) / 2);
+  z-index: 1;
+}
+.slider .active-states {
+  margin: 20px 0;
+}
+.slider .active-states span {
+  display: inline-block;
+  border: 1px solid hsl(12, 88%, 59%);
+  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+  padding: 4px;
+  margin: 1px;
+}
+.slider .active {
+  background-color: hsl(12, 88%, 59%);
+}
+
+.slider-container {
+  text-align: center;
+  display: none;
+  height: 200px;
+}
+
+.slider-text {
+  background-color: hsl(0, 0%, 98%);
+  position: relative;
+  padding: 20px;
+}
+.slider-text img {
+  position: absolute;
+  top: -30px;
+  left: calc((100% - 60px) / 2);
+}
+
+div.center {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  padding-inline: auto;
+  margin: 20px 0 40px;
+  border-radius: none;
+  text-align: center;
+}
+
+#footer-1 {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  padding-inline: auto;
+  margin: 0;
+  border-radius: none;
+  background: hsl(12, 88%, 59%);
+  text-align: center;
+}
+#footer-1 .large-text {
+  font-size: 35px;
+  line-height: normal;
+  color: #fff;
+  font-weight: 700;
+}
+#footer-1 .get-started, #footer-1 #form button, #form #footer-1 button {
+  background-color: #fff;
+  color: hsl(12, 88%, 59%);
+}
+#footer-1 .get-started:hover, #footer-1 #form button:hover, #form #footer-1 button:hover {
+  color: rgba(194, 73, 40, 0.7);
+  opacity: 1;
+}
+
+#footer-2 {
+  background: hsl(233, 12%, 13%);
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  padding-inline: auto;
+  margin: 0;
+  border-radius: none;
+}
+
+#form {
+  margin: 20px 0;
+}
+#form input {
+  outline: none;
+  border-radius: 25px;
+  border: none;
+  padding: 15px 20px;
+  color: hsl(233, 12%, 13%);
+  margin-right: 10px;
+}
+#form button {
+  padding: 15px 25px;
+  box-shadow: none;
+}
+#form p {
+  color: red;
+  margin-top: 0;
+  display: none;
+  font-size: 14px;
+}
+
+#bottom-nav {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  padding-inline: auto;
+  margin: 0;
+  border-radius: none;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+#bottom-nav #right {
+  justify-self: flex-end;
+}
+#bottom-nav ul {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  padding-inline: auto;
+  margin: 0;
+  border-radius: none;
+}
+#bottom-nav ul li {
+  list-style: none;
+}
+#bottom-nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+#contact-us {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  padding-inline: auto;
+  margin: 20px 0;
+  border-radius: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#contact-us img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#bottom-logo {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  padding-inline: auto;
+  margin: 40px 0 20px;
+  border-radius: none;
+  text-align: center;
+}
+
+#copyright {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  padding-inline: auto;
+  margin: 40px 0 0 0;
+  border-radius: none;
+  text-align: center;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=style.css.map */
