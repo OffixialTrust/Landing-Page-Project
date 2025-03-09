@@ -1,8 +1,8 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-@media screen and (min-width: 1024px) {
-  $inline: 150px;
+@media (min-width: 768px) and (max-width: 1024px){
+  $inline: 50px;
   p {
     font-size: 16.2px;
   }
@@ -89,7 +89,7 @@
   .community {
     overflow-x: scroll;
     overflow-y: hidden;
-    @include box($padding: 20px 0);
+    @include box;
     .slider {
     @include box($width: 130%, $padding: 30px 0 0);
     @include flex(start, space-between);

@@ -3,7 +3,7 @@ const qS = (query) => document.querySelector(query);
 const qSA = (query) => document.querySelectorAll(query);
 
 // Show/hide menu 
-if (window.matchMedia("(max-width: 819px)").matches) {
+if (window.matchMedia("(max-width: 767px)").matches) {
   const openMenu = qS("#open-menu");
 const topNav = qS("#top-nav");
 const closeMenu = qS("#close-menu");
@@ -31,7 +31,7 @@ function removeNav() {
 }
 
 // Working on the slider
-if (window.matchMedia("(max-width: 819px)").matches) {
+if (window.matchMedia("(max-width: 767px)").matches) {
   
 const sliderContainer = Array.from(qSA(".slider-container"));
 sliderContainer[0].style.display = "block";

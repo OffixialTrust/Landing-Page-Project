@@ -92,7 +92,7 @@ p {
   display: none;
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 1024px) {
   p {
     font-size: 16.2px;
   }
@@ -191,7 +191,7 @@ p {
     overflow-y: hidden;
     width: 100%;
     height: auto;
-    padding: 0;
+    padding: 20px 0;
     padding-inline: auto;
     margin: 0;
     border-radius: none;
@@ -242,6 +242,198 @@ p {
     width: 100%;
     height: auto;
     padding: 37.5px 150px;
+    padding-inline: auto;
+    margin: 0;
+    border-radius: none;
+    display: grid;
+    grid-template-areas: "one two two three" "four two two five";
+    gap: 30px 10px;
+  }
+  #footer-2 #bottom-logo {
+    grid-area: one;
+    align-self: start;
+    text-align: left;
+    justify-self: start;
+  }
+  #footer-2 #bottom-nav {
+    grid-area: two;
+    align-self: center;
+  }
+  #footer-2 #form {
+    grid-area: three;
+    justify-self: right;
+    align-self: end;
+  }
+  #footer-2 #contact-us {
+    grid-area: four;
+    display: block;
+    text-align: left;
+    padding-left: 0;
+    align-self: end;
+    justify-self: left;
+  }
+  #footer-2 #contact-us img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  #footer-2 #copyright {
+    grid-area: five;
+    justify-self: right;
+    text-align: right;
+  }
+  /* bottom of media query */
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  p {
+    font-size: 16.2px;
+  }
+  #header {
+    padding-inline: 50px;
+  }
+  #header #top-nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 55%;
+    background-color: transparent;
+  }
+  #header #menu {
+    display: none;
+  }
+  #header #top-button {
+    display: block;
+  }
+  #main {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    padding-inline: 50px;
+    margin: 25px 0;
+    border-radius: none;
+    display: grid;
+    gap: 50px 25px;
+    grid-template-areas: "one two" "three four";
+  }
+  #main #about-us {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    padding-inline: auto;
+    margin: 0;
+    border-radius: none;
+    grid-area: one;
+    text-align: left;
+  }
+  #main #about-us h1 {
+    font-size: 60px;
+  }
+  #main #about-us .grey-blue {
+    padding-right: 50px;
+  }
+  #main #illustration {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    padding-inline: auto;
+    margin: 0;
+    border-radius: none;
+    grid-area: two;
+  }
+  #main #illustration img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #main #careers {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    padding-inline: auto;
+    margin: 0;
+    border-radius: none;
+    grid-area: three;
+    text-align: left;
+  }
+  #main #careers h2.dark-blue {
+    text-align: left;
+    font-size: 40px;
+  }
+  #main #careers .grey-blue {
+    padding-right: 50px;
+  }
+  #main #product {
+    grid-area: four;
+  }
+  #main #product .product-header {
+    background-color: transparent;
+  }
+  #main #product .dark-blue {
+    margin-left: 12px;
+    font-size: 16.5px;
+  }
+  #main #product .grey-blue {
+    margin-left: 70px;
+  }
+  #community {
+    font-size: 45px;
+  }
+  .community {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    padding-inline: auto;
+    margin: 0;
+    border-radius: none;
+  }
+  .community .slider {
+    width: 130%;
+    height: auto;
+    padding: 30px 0 0;
+    padding-inline: auto;
+    margin: 0;
+    border-radius: none;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .community .slider .slider-button {
+    display: none;
+  }
+  .community .slider .active-states {
+    display: none;
+  }
+  .community .slider .slider-container {
+    display: block;
+    width: 33.33%;
+    margin: 0 10px;
+  }
+  div.center {
+    margin: 60px 0 50px !important;
+  }
+  #footer-1 {
+    width: 100%;
+    height: auto;
+    padding: 12.5px 50px;
+    padding-inline: auto;
+    margin: 0;
+    border-radius: none;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #footer-1 .large-text {
+    font-size: 40px;
+    display: inline-block;
+    overflow-wrap: break-word;
+  }
+  #footer-2 {
+    width: 100%;
+    height: auto;
+    padding: 12.5px 50px;
     padding-inline: auto;
     margin: 0;
     border-radius: none;
