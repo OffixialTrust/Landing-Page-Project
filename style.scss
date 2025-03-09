@@ -30,13 +30,26 @@ button {
   opacity: 0.7;
 }
 
-.section {
+#about-us {
+  @include box($margin: 25px 0, $pd-inline: $inline);
   text-align: center;
-  @include box($margin: 20px 0, $pd-inline: $inline);
+  h1 {
+        font-size: 35px;
+  }
+  .get-started {
+    margin: 20px 0 40px;
+  }
 }
 
-#about-us {
-  margin: 25px 0;
+#careers {
+  text-align: center;
+  @include box($margin: 60px 0, $pd-inline: $inline);
+  h2 {
+    font-size: 30px;
+  }
+  .grey-blue {
+    padding-inline: 5px;
+  }
 }
 
 #product {
@@ -70,14 +83,18 @@ button {
 }
 
 #community {
-  margin: 30px 0;
+  text-align: center;
+  margin: 60px 0;
+  font-size: 30px;
+}
+.community {
+  @include box($margin: 0 0 100px);
   text-align: center;
 }
 
 .slider {
   @include box($padding: $inline);
   position: relative;
-  
   .slider-button {
     background-color: $pale-red;
     border: none;
@@ -142,16 +159,16 @@ button {
 }
 
 div.center {
-  @include box($margin: 20px 0 40px);
+  @include box($margin: 60px 0);
   text-align: center;
 }
 
-#footer-1 {
-  @include box($padding: 30px);
+.footer-1 {
+  @include box($padding: $inline);
   background: $bright-red;
   text-align: center;
   .large-text {
-    font-size: 35px;
+    font-size: 30px;
     line-height: normal;
     color: $white;
     font-weight: $bolder;
@@ -166,13 +183,16 @@ div.center {
   }
 }
 
-#footer-2 {
+
+
+.footer-2 {
   background: $very-dark-blue;
   @include box($padding: 20px);
 }
 
 #form {
   margin: 20px 0;
+  text-align: center;
   input {
     outline: none;
     border-radius: $big-bd-radius;
@@ -184,7 +204,7 @@ div.center {
   
   button {
     @extend .get-started;
-    padding: 15px 25px;
+    padding: 15px 28px;
     box-shadow: none;
   }
   
@@ -198,7 +218,7 @@ div.center {
 
 #bottom-nav {
   @include box($padding: 10px);
-  @include flex(start, space-between);
+  @include flex(start, space-around);
   #right {
     justify-self: flex-end;
   }
@@ -218,7 +238,7 @@ div.center {
 
 #contact-us {
   @include box($padding: 20px, $margin: 20px 0);
-  @include flex(center, space-around);
+  @include flex(center, space-between);
   img {
     width: 30px;
     height: 30px;

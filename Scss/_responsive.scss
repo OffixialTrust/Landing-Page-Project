@@ -1,8 +1,11 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 820px) {
   $inline: 150px;
+  p {
+    font-size: 16.2px;
+  }
   
   #header {
     padding-inline: $inline;
@@ -10,34 +13,46 @@
       position: static;
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-evenly;
       width: 55%;
       background-color: transparent;
     }
     
-  #menu {
-    display: none;
-  }
+    #menu {
+      display: none;
+    }
   
-  #top-button {
-    display: block;
-  }
+    #top-button {
+      display: block;
+    }
   }
   
   #main {
-    @include box($pd-inline: $inline);
+    @include box($margin: calc($inline / 2) 0, $pd-inline: $inline);
     display: grid;
-    gap: $inline;
+    gap: $inline calc($inline / 2);
     grid-template-areas: 'one two' 'three four';
     
     #about-us {
       @include box;
       grid-area: one;
       text-align: left;
+      h1 {
+        font-size: 60px;
+      }
+      .grey-blue {
+        padding-right: $inline;
+      }
     }
     
     #illustration {
+      @include box;
       grid-area: two;
+      img {
+      max-width: 100%;
+      max-height: 100%;
+      }
+      
     }
     
     #careers {
@@ -46,6 +61,10 @@
       text-align: left;
       h2.dark-blue {
         text-align: left;
+        font-size: 40px;
+      }
+      .grey-blue {
+        padding-right: $inline;
       }
     }
     
@@ -56,6 +75,7 @@
       }
       .dark-blue {
         margin-left: 12px;
+        font-size: 16.5px;
       }
       .grey-blue {
         margin-left: 70px;
@@ -63,10 +83,16 @@
     }
   }
   
-  .slider {
-    @include box($padding: 30px 0);
-    @include flex(center, space-between);
+  #community {
+    font-size: 45px;
+  }
+  .community {
     overflow-x: scroll;
+    overflow-y: hidden;
+    @include box;
+    .slider {
+    @include box($width: 130%, $padding: 30px 0 0);
+    @include flex(start, space-between);
     .slider-button {
       display: none;
     }
@@ -76,14 +102,68 @@
     
     .slider-container {
       display: block;
-      width: 33%;
+      width: 33.33%;
       margin: 0 10px;
     }
-    
-    .slider-container#last-child {
-      display: none;
     }
   }
+  
+ div.center {
+  margin: 60px 0 $inline !important;
+}
 
+  #footer-1 {
+    @include box ($padding: calc($inline / 4) $inline);
+    text-align: left;
+   @include flex(center, space-between);
+   .large-text {
+     font-size: 40px;
+     display: inline-block;
+     overflow-wrap: break-word;
+   }
+  }
+  
+  #footer-2 {
+    @include box($padding: calc($inline / 4) $inline);
+    display: grid;
+    grid-template-areas: 'one two two three' 'four two two five';
+    gap: 30px 10px;
+    
+    
+    #bottom-logo {
+      grid-area: one;
+      align-self: start;
+      text-align: left;
+      justify-self: start;
+    }
+    #bottom-nav {
+      grid-area: two;
+      align-self: center;
+    }
+    #form {
+      grid-area: three;
+      justify-self: right;
+      align-self: end;
+    }
+    #contact-us {
+      grid-area: four;
+      display: block;
+      text-align: left;
+      padding-left: 0;
+      align-self: end;
+      justify-self: left;
+      img {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+      }
+    }
+    #copyright {
+      grid-area: five;
+      justify-self: right;
+      text-align: right;
+    }
+    
+  }
   /* bottom of media query */
 }

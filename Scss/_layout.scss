@@ -2,10 +2,11 @@
 @use "./mixins" as *;
 
 body {
-  // background: $light-grey;
-  @include box;
+  @include box($height: 100vh);
   font-family: 'Be Vietnam Pro';
   position: relative;
+  background: url('./images/bg-tablet-pattern.svg') no-repeat;
+  background-position: top right;
 }
 
 * {
@@ -14,4 +15,5 @@ body {
 
 p {
   line-height: 1.7;
+  font-size: 16px;
 }
